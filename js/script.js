@@ -5,13 +5,21 @@ $(document).ready(function() {
     function(event) {
       if (event.which == 13) {
         var inputValue = $("#send-text").val();
-
-        if (inputValue.lenght > 0) {
-          var elemento = $(".template .text-green p").clone();
-          $(".template p").append(elemento);
-          $("#send-text").val("";)
+        console.log(inputValue);
+        if (inputValue.length > 0) {
+          var elemento = $(".template").clone();
+          elemento.children("p").prepend(inputValue);
+          $("main-section-dx").append(elemento);
+          $("#send-text").val("");
         }
       }
     }
   )
 });
+
+
+// if (inputValue.length > 0) {
+//   var elemento = $(".template").clone();
+//   // elemento.prepend(imputValue+" ");
+//   ;
+// }

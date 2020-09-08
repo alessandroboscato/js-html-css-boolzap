@@ -1,3 +1,4 @@
+/* general */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -26,12 +27,65 @@
   background-color: red;
 }
 
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.header-top {
+  height: 70px;
+  width: 100%;
+  background-color: #E5DDD5;
+}
+
+/* typography */
+
+/* sezione rubrica */
+
 .section-wrapper-sx {
 width: calc(100% / 3);
 height: 100%;
 background-color: blue;
 float: left;
+border-right: 1px solid black;
 }
+
+.main-section-sx {
+  height: 100%;
+}
+
+.main-top {
+  height: 150px;
+  width: 100%;
+  background-color: pink;
+}
+
+.notifications {
+  height: 70%;
+  background-color: #8EDAFD;
+}
+
+.search {
+  height: 30%;
+  background-color: #FAFAFA;
+}
+
+.main-contacts {
+  width: 100%;
+  height: calc(100% - 220px);
+  background-color: red;
+  overflow-y: scroll;
+}
+
+.box-contact {
+  height: 100px;
+  border: 1px solid black;
+
+}
+
+
+/* sezione chat */
 
 .section-wrapper-dx {
   width: calc((100% / 3) * 2);

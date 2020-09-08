@@ -190,6 +190,11 @@ border-right: 1px solid black;
 .template {
   max-width: calc(100% - 200px);
   margin: auto;
+  display: none;
+}
+
+.active {
+  display: block;
 }
 
 .template::after {

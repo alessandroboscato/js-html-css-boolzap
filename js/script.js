@@ -8,8 +8,9 @@ $(document).ready(function() {
         console.log(inputValue);
         if (inputValue.length > 0) {
           var elemento = $(".template").clone();
-          elemento.children("p").prepend(inputValue);
-          $("main-section-dx").append(elemento);
+          elemento.addClass("active");
+          elemento.find("p").prepend(inputValue);
+          $(".main-section-dx").append(elemento);
           $("#send-text").val("");
         }
       }

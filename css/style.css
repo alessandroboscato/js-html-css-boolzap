@@ -79,6 +79,14 @@
   padding-left: 20px;
 }
 
+.d_inline {
+  display: inline-block;
+}
+
+.float_left {
+  float: left;
+}
+
 /* sezione rubrica */
 
 .section-wrapper-sx {
@@ -138,6 +146,15 @@ border-right: 1px solid black;
   height: 100%;
   background-color: yellow;
   float: left;
+}
+
+.conversation {
+  display: flex;
+  align-items: center;
+}
+
+.conversation .avatar {
+  width: 80px;
 }
 
 .main-section-dx {

@@ -176,7 +176,6 @@ border-right: 1px solid black;
   text-align: center;
 }
 
-
 .main-footer .text {
   width: calc(100% - 200px);
 }
@@ -184,5 +183,36 @@ border-right: 1px solid black;
 .main-footer input {
   height: 60px;
   width: 100%;
+  border-radius: 10px;
+}
+
+.template {
+  width: calc(100% - 200px);
+  background-color: red;
+  margin: auto;
+  border: 1px solid black;
+}
+
+.template::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.text-green {
+  background-color: #D5F9BA;
+  float: right;
+  max-width: 80%;
+  margin: 10px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.text-white {
+  background-color: #fff;
+  float: left;
+  max-width: 80%;
+  margin: 10px;
+  padding: 5px;
   border-radius: 10px;
 }

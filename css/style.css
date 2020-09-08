@@ -37,10 +37,34 @@
   height: 70px;
   width: 100%;
   background-color: #E5DDD5;
+  display: flex;
+  justify-content: space-between;
+}
+
+.avatar {
+  height: 100%;
+  width: auto;
+}
+
+.avatar img {
+  width: auto;
+  max-height: 100%;
+  border-radius: 100%;
+  padding: 5px;
 }
 
 /* typography */
 
+.icons i {
+  font-size: 25px;
+  padding: 7px;
+  color: #B1B1B1;
+}
+
+/* mix */
+.p_right_20 {
+  padding-right: 20px;
+}
 /* sezione rubrica */
 
 .section-wrapper-sx {
@@ -49,6 +73,11 @@ height: 100%;
 background-color: blue;
 float: left;
 border-right: 1px solid black;
+}
+
+.icons {
+  height: 100%;
+  line-height: 70px;
 }
 
 .main-section-sx {

@@ -219,8 +219,16 @@ margin-left: auto;
   float: left;
   max-width: 80%;
   margin: 10px;
-  padding: 5px;
+  padding: 10px 40px 10px 10px;;
   border-radius: 10px;
+  position: relative;
+}
+
+.message-time {
+  font-size: 12px;
+  position: absolute;
+  bottom: 3px;
+  right: 3px;
 }
 
 .sent {

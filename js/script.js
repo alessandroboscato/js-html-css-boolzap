@@ -7,7 +7,8 @@ $(document).ready(function() {
         var inputValue = $("#send-text").val();
         if (inputValue.length > 0) {
           var elemento = $(".template .message").clone();
-          elemento.find(".message-text").addClass("sent").text(inputValue);
+          elemento.find(".message-text").addClass("sent");
+          elemento.find("p").text(inputValue);
           $(".main-section-dx").append(elemento);
           $("#send-text").val("");
         }

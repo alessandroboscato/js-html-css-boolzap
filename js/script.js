@@ -25,16 +25,18 @@ $(document).ready(function() {
     function() {
        var inputText = $(this).val().toLowerCase();
        console.log(inputText);
-       var nameContact = $(".box-contact .text h3").each(
+       var nameContact = $("h3").each(
          function() {
-           var nameFound = false;
+           var nameFound;
            var textContact = $(this).text().toString().toLowerCase();
            console.log(textContact);
            if (textContact.includes(inputText)) {
              nameFound = true;
            } else {
-             nameFound;
+             nameFound = false;
+             $(this).parents(".box-contact").hide();
            };
+
            console.log(nameFound);
            }
        );

@@ -8,7 +8,6 @@ $(document).ready(function() {
         if (inputValue.length > 0) {
           var elemento = $(".template .message").clone();
           elemento.find(".message-text").addClass("sent").text(inputValue);
-          // elemento.find("p").prepend(inputValue);
           $(".main-section-dx").append(elemento);
           $("#send-text").val("");
         }

@@ -198,12 +198,13 @@ margin-left: auto;
 
 .message {
   max-width: calc(100% - 200px);
+  height: auto;
   margin: auto;
 }
 
-.template {
+/* .template {
   display: none;
-}
+} */
 
 .active {
   display: block;

@@ -21,6 +21,15 @@ $(document).ready(function() {
     }
   );
 
+  $("#search-contacts").keyup(
+    function() {
+       var inputText = $("#search-contacts").val();
+       console.log(inputText);
+       var contactsFound = $(".box-contact .text h3").find(inputText);
+       console.log(contactsFound);
+    }
+  );
+
 
 });
 

@@ -25,7 +25,6 @@
   left: 50%;
   transform: translate(-50%, -50%);
   z-index: 1;
-  background-color: red;
 }
 
 .container::after {
@@ -99,7 +98,6 @@
 .section-wrapper-sx {
 width: calc(100% / 3);
 height: 100%;
-background-color: blue;
 float: left;
 border-right: 1px solid black;
 }
@@ -110,7 +108,7 @@ border-right: 1px solid black;
 }
 
 .main-section-sx {
-  height: 100%;
+  height: calc(100% - 70px);
 }
 
 .main-top {
@@ -148,9 +146,9 @@ border-right: 1px solid black;
 
 .main-contacts {
   width: 100%;
-  height: calc(100% - 190px);
-  background-color: red;
+  height: calc(100% - 120px);
   overflow-y: scroll;
+  background-color: #fff;
 }
 
 .box-contact {
@@ -190,7 +188,6 @@ margin-left: auto;
 .main-section-dx {
  width: 100%;
  height: calc(100% - 140px);
- background-color: blue;
  background-image: url(../img/mine.jpg);
  overflow-y: scroll;
 }

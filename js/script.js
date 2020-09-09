@@ -23,21 +23,18 @@ $(document).ready(function() {
 
   $("#search-contacts").keyup(
     function() {
-       var inputText = $(this).val().toLowerCase();
-       console.log(inputText);
+       var inputText = $("#search-contacts").val().toLowerCase();
        var nameContact = $("h3").each(
          function() {
            var nameFound;
            var textContact = $(this).text().toString().toLowerCase();
-           console.log(textContact);
            if (textContact.includes(inputText)) {
              nameFound = true;
+             $(this).parents(".box-contact").show();
            } else {
              nameFound = false;
              $(this).parents(".box-contact").hide();
            };
-
-           console.log(nameFound);
            }
        );
 

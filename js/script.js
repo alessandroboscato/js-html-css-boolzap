@@ -23,14 +23,14 @@ $(document).ready(function() {
 
   $("#search-contacts").keyup(
     function() {
-       var inputText = $("#search-contacts").val().toString();
+       var inputText = $(this).val().toLowerCase();
        console.log(inputText);
        var nameContact = $(".box-contact .text h3").each(
          function() {
            var nameFound = false;
-           var nameContact = $(this).text();
-           console.log(nameContact);
-           if (nameContact.includes(inputText)) {
+           var textContact = $(this).text().toString().toLowerCase();
+           console.log(textContact);
+           if (textContact.includes(inputText)) {
              nameFound = true;
            } else {
              nameFound;

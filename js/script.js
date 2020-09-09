@@ -25,8 +25,20 @@ $(document).ready(function() {
     function() {
        var inputText = $("#search-contacts").val();
        console.log(inputText);
-       var contactsFound = $(".box-contact .text h3").find(inputText);
+       $(".box-contact .text h3").each(
+         function() {
+           if ($(this).includes(inputText)) {
+             return true;
+           } else {
+             return false;
+           }
+         }
+       )
+       var contactsFound = $(".box-contact .text h3").text();
        console.log(contactsFound);
+       if (contactsFound.includes(inputText) == false) {
+         contactsFound.parent(".box-contact").hide();
+       }
     }
   );
 

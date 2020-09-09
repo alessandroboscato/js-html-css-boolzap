@@ -23,23 +23,23 @@ $(document).ready(function() {
 
   $("#search-contacts").keyup(
     function() {
-       var inputText = $("#search-contacts").val();
+       var inputText = $("#search-contacts").val().toString();
        console.log(inputText);
-       $(".box-contact .text h3").each(
+       var nameContact = $(".box-contact .text h3").each(
          function() {
-           if ($(this).includes(inputText)) {
-             return true;
+           var nameFound = false;
+           var nameContact = $(this).text();
+           console.log(nameContact);
+           if (nameContact.includes(inputText)) {
+             nameFound = true;
            } else {
-             return false;
+             nameFound;
+           };
+           console.log(nameFound);
            }
-         }
-       )
-       var contactsFound = $(".box-contact .text h3").text();
-       console.log(contactsFound);
-       if (contactsFound.includes(inputText) == false) {
-         contactsFound.parent(".box-contact").hide();
-       }
-    }
+       );
+
+      }
   );
 
 

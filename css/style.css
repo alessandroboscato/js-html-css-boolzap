@@ -55,9 +55,12 @@
 }
 
 /* typography */
+body {
+  font-family: 'Roboto', sans-serif;
+}
 
 .icons i {
-  font-size: 25px;
+  font-size: 23px;
   padding: 7px;
   color: #B1B1B1;
 }
@@ -68,11 +71,35 @@
 }
 
 .notifications i {
-  font-size: 25px;
+  font-size: 20px;
   background-color: #fff;
   border-radius: 100%;
-  padding: 15px;
+  padding: 15px 12px;
   color: #8EDAFD;
+}
+
+.notifications h4 {
+  font-weight: 400;
+}
+
+.notifications p a {
+  font-size: 15px;
+  color: #6497AE;
+  font-weight: 100;
+}
+
+.search input::placeholder {
+  font-size: 12px;
+}
+
+.box-contact h4 {
+  font-weight: 500;
+}
+
+.box-contact p {
+  color: #B1B1B1;
+  font-size: 14px;
+  margin-top: 5px;
 }
 
 /* mix */
@@ -93,6 +120,10 @@
   float: left;
 }
 
+.m_left_5 {
+  margin-left: 5px;
+}
+
 /* sezione rubrica */
 
 .section-wrapper-sx {
@@ -100,11 +131,6 @@ width: calc(100% / 3);
 height: 100%;
 float: left;
 border-right: 1px solid black;
-}
-
-.icons {
-  height: 100%;
-  line-height: 70px;
 }
 
 .main-section-sx {
@@ -142,6 +168,7 @@ border-right: 1px solid black;
   width: 100%;
   height: 100%;
   text-align: center;
+  border: 0.5px solid lightgrey;
 }
 
 .main-contacts {
@@ -164,7 +191,12 @@ border-right: 1px solid black;
 }
 
 .contact-time {
-margin-left: auto;
+  font-size: 12px;
+  margin-left: auto;
+  align-self: flex-start;
+  margin-top: 20px;
+  margin-right: 10px;
+  color: #B1B1B1;
 }
 
 /* sezione chat */

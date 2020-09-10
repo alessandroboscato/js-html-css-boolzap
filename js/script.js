@@ -24,7 +24,7 @@ $(document).ready(function() {
   $("#search-contacts").keyup(
     function() {
        var inputText = $("#search-contacts").val().toLowerCase();
-       var nameContact = $("h3").each(
+       var nameContact = $("h4").each(
          function() {
            var nameFound;
            var textContact = $(this).text().toString().toLowerCase();

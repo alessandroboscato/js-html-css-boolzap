@@ -59,15 +59,32 @@ $(document).ready(function() {
 
 var menuMsg = $(".message-text").mouseenter(
   function () {
-    $(this).find(".delete-msg").addClass("active");
+    $(this).find(".msg-option").addClass("active");
   }
 );
 
 var removemenuMsg = $(".message-text").mouseleave(
   function () {
-    $(this).find(".delete-msg").removeClass("active");
+    $(this).find(".msg-option").removeClass("active");
   }
 );
+
+
+// Al click sull'icona del messaggio appare il menu a tendina
+
+  var menuAppears = $(".msg-option").click(
+    function () {
+      $(this).siblings(".message-menu").toggle();
+    }
+  );
+
+  //cancella messaggio
+
+  var deleteMsg = $(".delete-msg").click(
+    function () {
+      $(this).parents(".message").remove();
+    }
+  );
 
 // Al click sul box contact con l'attributo n mostro la chat corrispondente
   var selectedContact = $(".box-contact").click(

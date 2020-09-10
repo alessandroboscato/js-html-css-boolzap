@@ -280,7 +280,7 @@ position: relative;
   position: relative;
 }
 
-.delete-msg {
+.msg-option {
   position: absolute;
   right: 3px;
   bottom: 10px;
@@ -309,6 +309,11 @@ position: relative;
 
 .message-menu ul {
   list-style: none;
+}
+
+.message-menu a {
+  text-decoration: none;
+  color: #000;
 }
 
 .sent {

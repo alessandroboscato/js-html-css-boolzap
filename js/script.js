@@ -56,16 +56,31 @@ $(document).ready(function() {
   );
 
 // Al click sul box contact con l'attributo n mostro la chat corrispondente
-
   var selectedContact = $(".box-contact").click(
-    function () {
-      for (var i = 0; i < selectedContact.length; i++) {
-        if ($(this).attr(i)) {
-          $(".chat").attr(i).addClass("active");
+    function() {
+      var attribute = $(this).attr("data-contact");
+      console.log(attribute);
+      var chat = $(".chat").attr("data-contact").each(
+        function() {
+          if ($(this) == chat) {
+            $(this).addClass("active");
+          }
         }
-      }
-      }
+      );
+
+    }
   );
+
+
+  // var selectedContact = $(".box-contact").click(
+  //   function () {
+  //     for (var i = 0; i < selectedContact.length; i++) {
+  //       if ($(this).attr(i)) {
+  //         $(".chat").attr(i).addClass("active");
+  //       }
+  //     }
+  //     }
+  // );
 
 });
 //

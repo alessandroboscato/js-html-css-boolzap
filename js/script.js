@@ -64,23 +64,14 @@ $(document).ready(function() {
         function() {
           if ($(this).attr("data-contact") == attribute) {
             $(this).addClass("active");
+          } else {
+            $(this).removeClass("active");
           }
         }
       );
 
     }
   );
-
-
-  // var selectedContact = $(".box-contact").click(
-  //   function () {
-  //     for (var i = 0; i < selectedContact.length; i++) {
-  //       if ($(this).attr(i)) {
-  //         $(".chat").attr(i).addClass("active");
-  //       }
-  //     }
-  //     }
-  // );
 
 });
 //

@@ -60,9 +60,9 @@ $(document).ready(function() {
     function() {
       var attribute = $(this).attr("data-contact");
       console.log(attribute);
-      var chat = $(".chat").attr("data-contact").each(
+      var chat = $(".chat").each(
         function() {
-          if ($(this) == chat) {
+          if ($(this).attr("data-contact") == attribute) {
             $(this).addClass("active");
           }
         }

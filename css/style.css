@@ -260,9 +260,9 @@ position: relative;
   margin: auto;
 }
 
-/* .template {
+.template {
   display: none;
-} */
+}
 
 .message::after {
     content: "";

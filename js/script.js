@@ -56,35 +56,45 @@ $(document).ready(function() {
   );
 
 //All'hover sul messaggio appare menù a tendina
-
-var menuMsg = $(".message-text").mouseenter(
+$(document).on(
   function () {
-    $(this).find(".msg-option").addClass("active");
-  }
-);
+    var menuMsg = $(".message-text").mouseenter(
+      function () {
+        $(this).find(".msg-option").addClass("active");
+      }
+    );
 
-var removemenuMsg = $(".message-text").mouseleave(
-  function () {
-    $(this).find(".msg-option").removeClass("active");
+    var removemenuMsg = $(".message-text").mouseleave(
+      function () {
+        $(this).find(".msg-option").removeClass("active");
+      }
+    );
+
+    var menuAppears = $(".msg-option").click(
+      function () {
+        $(this).siblings(".message-menu").toggle();
+      }
+    );
+
+    var deleteMsg = $(".delete-msg").click(
+      function () {
+        $(this).parents(".message").remove();
+      }
+    );
   }
-);
+)
+
+
+
 
 
 // Al click sull'icona del messaggio appare il menu a tendina
 
-  var menuAppears = $(".msg-option").click(
-    function () {
-      $(this).siblings(".message-menu").toggle();
-    }
-  );
+
 
   //cancella messaggio
 
-  var deleteMsg = $(".delete-msg").click(
-    function () {
-      $(this).parents(".message").remove();
-    }
-  );
+
 
 // Al click sul box contact con l'attributo n mostro la chat corrispondente
   var selectedContact = $(".box-contact").click(

@@ -53,12 +53,22 @@ $(document).ready(function() {
     function () {
       $(this).removeClass("selected");
     }
-  )
+  );
 
+// Al click sul box contact con l'attributo n mostro la chat corrispondente
 
+  var selectedContact = $(".box-contact").click(
+    function () {
+      for (var i = 0; i < selectedContact.length; i++) {
+        if ($(this).attr(i)) {
+          $(".chat").attr(i).addClass("active");
+        }
+      }
+      }
+  );
 
 });
-// $(".box-contact[data-contact]"
+//
 // ------------------------------------------
 
 function sendMessage() {

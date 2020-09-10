@@ -83,7 +83,7 @@ function sendMessage() {
     var elemento = $(".template .message").clone();
     elemento.find(".message-text").addClass("sent");
     elemento.find("p").text(inputValue);
-    $(".chat").append(elemento);
+    $(".chat.active").append(elemento);
     var time = generateTime();
     elemento.find(".message-time").text(time);
   }
@@ -92,7 +92,7 @@ function sendMessage() {
 function answerMessage() {
   var elemento = $(".template .message").clone();
   elemento.find("p").text("ok");
-  $(".chat").append(elemento);
+  $(".chat.active").append(elemento);
   var time = generateTime();
   elemento.find(".message-time").text(time);
 }

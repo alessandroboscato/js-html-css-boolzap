@@ -55,6 +55,20 @@ $(document).ready(function() {
     }
   );
 
+//All'hover sul messaggio appare menù a tendina
+
+var menuMsg = $(".message-text").mouseenter(
+  function () {
+    $(this).find(".delete-msg").addClass("active");
+  }
+);
+
+var removemenuMsg = $(".message-text").mouseleave(
+  function () {
+    $(this).find(".delete-msg").removeClass("active");
+  }
+);
+
 // Al click sul box contact con l'attributo n mostro la chat corrispondente
   var selectedContact = $(".box-contact").click(
     function() {

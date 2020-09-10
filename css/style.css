@@ -231,10 +231,6 @@ position: relative;
  padding-top: 70px;
 }
 
-.active {
-  display: block;
-}
-
 .main-footer {
   height: 70px;
   background-color: #F3EEEA;
@@ -264,9 +260,9 @@ position: relative;
   margin: auto;
 }
 
-.template {
+/* .template {
   display: none;
-}
+} */
 
 .message::after {
     content: "";
@@ -279,19 +275,47 @@ position: relative;
   float: left;
   max-width: 80%;
   margin: 10px;
-  padding: 10px 40px 10px 10px;;
+  padding: 15px 30px 15px 15px;;
   border-radius: 10px;
   position: relative;
+}
+
+.delete-msg {
+  position: absolute;
+  right: 3px;
+  bottom: 10px;
+  display: none;
 }
 
 .message-time {
   font-size: 12px;
   position: absolute;
-  bottom: 3px;
+  bottom: 0px;
   right: 3px;
+}
+
+.message-menu {
+  position: absolute;
+  background-color: #fff;
+  text-align: center;
+  padding: 5px;
+  width: 160px;
+  line-height: 37px;
+  font-size: 14px;
+  top: 48px;
+  left: 0px;
+  display: none;
+}
+
+.message-menu ul {
+  list-style: none;
 }
 
 .sent {
   background-color: #D5F9BA;
   float: right;
+}
+
+.active {
+  display: block;
 }

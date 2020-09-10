@@ -179,10 +179,13 @@ border-right: 1px solid black;
 }
 
 .box-contact {
-  border: 1px solid black;
   background-color: #fff;
   display: flex;
   align-items: center;
+}
+
+.selected {
+  background-color: #E9EBEB;
 }
 
 .box-contact .avatar {
@@ -217,11 +220,16 @@ border-right: 1px solid black;
   width: 80px;
 }
 
-.main-section-dx {
+.chat {
  width: 100%;
  height: calc(100% - 140px);
  background-image: url(../img/mine.jpg);
  overflow-y: scroll;
+ display: none;
+}
+
+.active {
+  display: block;
 }
 
 .main-footer {

@@ -17,17 +17,18 @@ $(document).ready(function() {
       var inputValue = $("#send-text").val();
       if (inputValue != 0) {
       var answer = setTimeout(answerMessage, 1000);
+      $("#send-text").val("");
       }
     }
   );
 
   $("#search-contacts").keyup(
     function() {
-       var inputText = $("#search-contacts").val().toLowerCase();
+       var inputText = $(this).val().toLowerCase();
        var nameContact = $("h4").each(
          function() {
            var nameFound;
-           var textContact = $(this).text().toString().toLowerCase();
+           var textContact = $(this).text().toLowerCase();
            if (textContact.includes(inputText)) {
              nameFound = true;
              $(this).parents(".box-contact").show();
@@ -37,13 +38,27 @@ $(document).ready(function() {
            };
            }
        );
-
       }
   );
 
+// All'hover sul box contatto cambio il background color
+
+  var hoverContact = $(".box-contact").mouseenter(
+    function () {
+      $(this).addClass("selected");
+    }
+  );
+
+  var removeHoverContact = $(".box-contact").mouseleave(
+    function () {
+      $(this).removeClass("selected");
+    }
+  )
+
+
 
 });
-
+// $(".box-contact[data-contact]"
 // ------------------------------------------
 
 function sendMessage() {
@@ -52,7 +67,7 @@ function sendMessage() {
     var elemento = $(".template .message").clone();
     elemento.find(".message-text").addClass("sent");
     elemento.find("p").text(inputValue);
-    $(".main-section-dx").append(elemento);
+    $(".chat").append(elemento);
     var time = generateTime();
     elemento.find(".message-time").text(time);
   }
@@ -61,7 +76,7 @@ function sendMessage() {
 function answerMessage() {
   var elemento = $(".template .message").clone();
   elemento.find("p").text("ok");
-  $(".main-section-dx").append(elemento);
+  $(".chat").append(elemento);
   var time = generateTime();
   elemento.find(".message-time").text(time);
 }

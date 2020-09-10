@@ -40,6 +40,8 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  position: absolute;
+  top: 0;
 }
 
 .avatar {
@@ -92,11 +94,11 @@ body {
   font-size: 12px;
 }
 
-.box-contact h4 {
+.box-contact h4, .chat h4 {
   font-weight: 500;
 }
 
-.box-contact p {
+.box-contact p,  .chat .conversation p {
   color: #B1B1B1;
   font-size: 14px;
   margin-top: 5px;
@@ -131,6 +133,7 @@ width: calc(100% / 3);
 height: 100%;
 float: left;
 border-right: 1px solid black;
+position: relative;
 }
 
 .main-section-sx {
@@ -148,6 +151,7 @@ border-right: 1px solid black;
   background-color: #8EDAFD;
   display: flex;
   align-items: center;
+  margin-top: 70px;
 }
 
 .search {
@@ -209,6 +213,7 @@ border-right: 1px solid black;
   height: 100%;
   background-color: yellow;
   float: left;
+  position: relative;
 }
 
 .conversation {
@@ -216,16 +221,14 @@ border-right: 1px solid black;
   align-items: center;
 }
 
-.conversation .avatar {
-  width: 80px;
-}
 
 .chat {
  width: 100%;
- height: calc(100% - 140px);
+ height: calc(100% - 70px);
  background-image: url(../img/mine.jpg);
  overflow-y: scroll;
  display: none;
+ padding-top: 70px;
 }
 
 .active {

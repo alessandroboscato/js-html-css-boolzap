@@ -59,7 +59,6 @@ $(document).ready(function() {
   var selectedContact = $(".box-contact").click(
     function() {
       var attribute = $(this).attr("data-contact");
-      console.log(attribute);
       var chat = $(".chat").each(
         function() {
           if ($(this).attr("data-contact") == attribute) {

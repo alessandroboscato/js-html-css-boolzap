@@ -55,11 +55,10 @@ $(document).ready(function() {
     }
   );
 
-//Menù tendina
+// Menù tendina
   $(document).on("click", ".msg-option",
     function () {
       $(this).siblings(".message-menu").toggle();
-
     }
   );
 

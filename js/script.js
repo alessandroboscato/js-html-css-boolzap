@@ -7,7 +7,13 @@ $(document).ready(function() {
       $(this).text(randomNumber);
     }
   )
-
+//ordino i contatti in base all'ultimo accesso effettuato
+  var contactList = $(".contact-time").each(
+    function() {
+      var contact = $(this).text()
+      console.log(contact);
+    }
+  );
 
 
   $("#send-text").keydown(

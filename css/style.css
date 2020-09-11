@@ -40,9 +40,6 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  position: absolute;
-  z-index: 2;
-  top: 0;
 }
 
 .avatar {
@@ -95,11 +92,11 @@ body {
   font-size: 12px;
 }
 
-.box-contact h4, .chat h4 {
+.box-contact h4, .header-top h4 {
   font-weight: 500;
 }
 
-.box-contact p,  .chat .conversation p {
+.box-contact p,  .header-top p {
   color: #B1B1B1;
   font-size: 14px;
   margin-top: 5px;
@@ -158,7 +155,6 @@ position: relative;
   background-color: #8EDAFD;
   display: flex;
   align-items: center;
-  margin-top: 70px;
 }
 
 .search {
@@ -228,14 +224,12 @@ position: relative;
   align-items: center;
 }
 
-
 .chat {
  width: 100%;
- height: calc(100% - 70px);
+ height: calc(100% - 140px);
  background-image: url(../img/mine.jpg);
  overflow-y: scroll;
  display: none;
- padding-top: 70px;
 }
 
 .main-footer {

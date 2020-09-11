@@ -78,13 +78,12 @@ $(document).ready(function() {
     function() {
       var attribute = $(this).attr("data-contact");
       var nameContact = $(this).find("h4").text();
-      console.log(nameContact);
       var chat = $(".chat").each(
         function() {
           if ($(this).attr("data-contact") == attribute) {
             $(this).addClass("active");
-            $(this).find("h4").text(nameContact);
-            $(this).find("img").attr("src", "img/avatar_"+attribute+".jpg")
+            $(this).siblings(".header-top").find("h4").text(nameContact);
+            $(this).siblings(".header-top").find("img").attr("src", "img/avatar_"+attribute+".jpg")
           } else {
             $(this).removeClass("active");
           }

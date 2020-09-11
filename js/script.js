@@ -56,6 +56,7 @@ $(document).ready(function() {
   );
 
 // Menù tendina
+
   $(document).on("click", ".msg-option",
     function () {
       $(this).siblings(".message-menu").toggle();
@@ -72,7 +73,7 @@ $(document).ready(function() {
   );
 
 
-// Al click sul box contact con l'attributo n mostro la chat corrispondente
+// Al click sul box contact attribute "n" mostro la chat "n" corrispondente
   var selectedContact = $(".box-contact").click(
     function() {
       var attribute = $(this).attr("data-contact");

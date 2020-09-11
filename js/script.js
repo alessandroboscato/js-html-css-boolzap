@@ -56,19 +56,9 @@ $(document).ready(function() {
   );
 
 //All'hover sul messaggio appare menù a tendina
-$(document).on(
+$(document).on("click",
   function () {
-    var menuMsg = $(".message-text").mouseenter(
-      function () {
-        $(this).find(".msg-option").addClass("active");
-      }
-    );
 
-    var removemenuMsg = $(".message-text").mouseleave(
-      function () {
-        $(this).find(".msg-option").removeClass("active");
-      }
-    );
 
     var menuAppears = $(".msg-option").click(
       function () {
@@ -82,7 +72,7 @@ $(document).on(
       }
     );
   }
-)
+);
 
 
 

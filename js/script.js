@@ -1,7 +1,14 @@
 
 $(document).ready(function() {
+//genero un numero random per l'ultimo accesso del contatto e lo stampo nel DOM
+  $(".contact-time").each(
+    function() {
+      var randomNumber = randomHour();
+      $(this).text(randomNumber);
+    }
+  )
 
-  $()
+
 
   $("#send-text").keydown(
     function(event) {
@@ -131,7 +138,7 @@ $(document).ready(function() {
     return time;
   }
 //funzione che genera l'orario casuale dell'ultimo accesso del contatto
-  function randomNumber() {
+  function randomHour() {
     //genero un numero da 0 a 23
     var hours = Math.floor(Math.random() * 24);
     var minutes = Math.floor(Math.random() * 60);

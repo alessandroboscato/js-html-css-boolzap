@@ -5,8 +5,11 @@ $(document).ready(function() {
     function(event) {
       if (event.which == 13) {
         sendMessage();
+        var inputValue = $("#send-text").val();
+        if (inputValue != 0) {
+          var answer = setTimeout(answerMessage, 1000);
+        }
         $("#send-text").val("");
-        var answer = setTimeout(answerMessage, 1000);
       }
     }
   );

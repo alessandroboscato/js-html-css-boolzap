@@ -55,19 +55,19 @@ $(document).ready(function() {
     }
   );
 
-//All'hover sul messaggio appare menù a tendina
-$(document).on("click", ".msg-option",
-  function () {
-    $(this).siblings(".message-menu").toggle();
+//Menù tendina
+  $(document).on("click", ".msg-option",
+    function () {
+      $(this).siblings(".message-menu").toggle();
 
-  }
-);
+    }
+  );
 
-$(document).on("click", ".delete-msg",
-  function() {
-    $(this).parents(".message").remove();
-  }
-);
+  $(document).on("click", ".delete-msg",
+    function() {
+      $(this).parents(".message").remove();
+    }
+  );
 
 
 // Al click sul box contact con l'attributo n mostro la chat corrispondente
@@ -86,39 +86,38 @@ $(document).on("click", ".delete-msg",
 
     }
   );
+//FUNCTIONS
+  function sendMessage() {
+    var inputValue = $("#send-text").val();
+    if (inputValue != 0) {
+      var elemento = $(".template .message").clone();
+      elemento.find(".message-text").addClass("sent");
+      elemento.find("p").text(inputValue);
+      $(".chat.active").append(elemento);
+      var time = generateTime();
+      elemento.find(".message-time").text(time);
+    }
+  }
 
-});
-//
-// ------------------------------------------
-
-function sendMessage() {
-  var inputValue = $("#send-text").val();
-  if (inputValue != 0) {
+  function answerMessage() {
     var elemento = $(".template .message").clone();
-    elemento.find(".message-text").addClass("sent");
-    elemento.find("p").text(inputValue);
+    elemento.find("p").text("ok");
     $(".chat.active").append(elemento);
     var time = generateTime();
     elemento.find(".message-time").text(time);
   }
-}
-
-function answerMessage() {
-  var elemento = $(".template .message").clone();
-  elemento.find("p").text("ok");
-  $(".chat.active").append(elemento);
-  var time = generateTime();
-  elemento.find(".message-time").text(time);
-}
 
 
-function generateTime() {
-  var date = new Date();
-  var hours = date.getHours();
-  var minutes = date.getMinutes();
-  if (minutes < 10) {
-    minutes = "0" + minutes;
+  function generateTime() {
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    var time = hours + ":" + minutes;
+    return time;
   }
-  var time = hours + ":" + minutes;
-  return time;
-}
+});
+//
+// ------------------------------------------

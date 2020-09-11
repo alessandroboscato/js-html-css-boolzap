@@ -59,6 +59,9 @@ $(document).ready(function() {
   $(document).on("click", ".msg-option",
     function () {
       $(this).siblings(".message-menu").toggle();
+      if ($(this).parent(".message-text").hasClass("sent")) {
+        $(this).addClass("message-sent");
+      }
     }
   );
 
@@ -85,6 +88,7 @@ $(document).ready(function() {
 
     }
   );
+
 //FUNCTIONS
   function sendMessage() {
     var inputValue = $("#send-text").val();
@@ -118,5 +122,3 @@ $(document).ready(function() {
     return time;
   }
 });
-//
-// ------------------------------------------

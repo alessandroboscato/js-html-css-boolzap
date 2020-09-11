@@ -56,21 +56,10 @@ $(document).ready(function() {
   );
 
 //All'hover sul messaggio appare menù a tendina
-$(document).on("click",
+$(document).on("click", ".msg-option",
   function () {
+    $(this).siblings(".message-menu").toggle();
 
-
-    var menuAppears = $(".msg-option").click(
-      function () {
-        $(this).siblings(".message-menu").toggle();
-      }
-    );
-
-    var deleteMsg = $(".delete-msg").click(
-      function () {
-        $(this).parents(".message").remove();
-      }
-    );
   }
 );
 

@@ -77,10 +77,14 @@ $(document).ready(function() {
   var selectedContact = $(".box-contact").click(
     function() {
       var attribute = $(this).attr("data-contact");
+      var nameContact = $(this).find("h4").text();
+      console.log(nameContact);
       var chat = $(".chat").each(
         function() {
           if ($(this).attr("data-contact") == attribute) {
             $(this).addClass("active");
+            $(this).find("h4").text(nameContact);
+            $(this).find("img").attr("src", "img/avatar_"+attribute+".jpg")
           } else {
             $(this).removeClass("active");
           }

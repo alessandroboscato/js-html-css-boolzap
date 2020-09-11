@@ -105,6 +105,12 @@ body {
   margin-top: 5px;
 }
 
+/* COLORS */
+
+.message-menu li:hover span {
+  color: #B1B1B1;
+}
+
 /* mix */
 
 .p_right_20 {

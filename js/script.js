@@ -63,16 +63,11 @@ $(document).on("click", ".msg-option",
   }
 );
 
-
-
-
-
-// Al click sull'icona del messaggio appare il menu a tendina
-
-
-
-  //cancella messaggio
-
+$(document).on("click", ".delete-msg",
+  function() {
+    $(this).parents(".message").remove();
+  }
+);
 
 
 // Al click sul box contact con l'attributo n mostro la chat corrispondente

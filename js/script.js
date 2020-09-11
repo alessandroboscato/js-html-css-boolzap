@@ -1,6 +1,8 @@
 
 $(document).ready(function() {
 
+  $()
+
   $("#send-text").keydown(
     function(event) {
       if (event.which == 13) {
@@ -97,6 +99,7 @@ $(document).ready(function() {
   );
 
 //FUNCTIONS
+//funzione di invio messaggio
   function sendMessage() {
     var inputValue = $("#send-text").val();
     if (inputValue != 0) {
@@ -108,7 +111,7 @@ $(document).ready(function() {
       elemento.find(".message-time").text(time);
     }
   }
-
+//funzione di risposta del bot
   function answerMessage() {
     var elemento = $(".template .message").clone();
     elemento.find("p").text("ok");
@@ -116,8 +119,7 @@ $(document).ready(function() {
     var time = generateTime();
     elemento.find(".message-time").text(time);
   }
-
-
+//funzione che genera l'ora attuale
   function generateTime() {
     var date = new Date();
     var hours = date.getHours();
@@ -128,4 +130,19 @@ $(document).ready(function() {
     var time = hours + ":" + minutes;
     return time;
   }
+//funzione che genera l'orario casuale dell'ultimo accesso del contatto
+  function randomNumber() {
+    //genero un numero da 0 a 23
+    var hours = Math.floor(Math.random() * 24);
+    var minutes = Math.floor(Math.random() * 60);
+    if (hours < 10 ) {
+      hours = "0" + hours;
+    };
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    };
+    var time = hours + ":" + minutes;
+    return time;
+  }
+
 });

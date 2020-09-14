@@ -7,14 +7,9 @@ $(document).ready(function() {
       $(this).text(randomNumber);
     }
   )
-//ordino i contatti in base all'ultimo accesso effettuato
-  var contactList = $(".contact-time").each(
-    function() {
-      var contact = $(this).text()
-      console.log(contact);
-    }
-  );
+// ordino i contatti in base all'ultimo accesso effettuato
 
+  
 
   $("#send-text").keydown(
     function(event) {
@@ -84,19 +79,15 @@ $(document).ready(function() {
     }
   );
 
-  $(document).on("click",
-    function (e) {
-      if (e.target !== "div.message-menu") {
-        $(".message-menu").hide();
-      }
-    }
-  );
-
-  // $("body").click(function(e){
-  //   if (e.target !== ".message-menu") {
-  //     $(".message-menu").hide();
+  // $(document).on("click",
+  //   function (e) {
+  //     if (e.target !== "div.message-menu") {
+  //       $(".message-menu").hide();
+  //     }
   //   }
-  // });
+  // );
+
+
 
   $(document).on("click", ".delete-msg",
     function() {
